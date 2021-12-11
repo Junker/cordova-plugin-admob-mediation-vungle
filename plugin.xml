@@ -29,6 +29,8 @@
     </platform>
 
 	<config-file parent="/*" target="config.xml">
-		<preference name="REWARDVIDEO_ID" value="$REWARDVIDEO_ID"/>
+		<preference name="BANNER_ID" value="$BANNER_ID"/>
+		<preference name="INTERSTITIAL_ID" value="$INTERSTITIAL_ID"/>
+		<preference name="REWARDED_ID" value="$REWARDED_ID"/>
 	</config-file>
 </plugin>

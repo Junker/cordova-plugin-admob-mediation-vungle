@@ -14,19 +14,21 @@
     [super pluginInitialize];
     if (self) {
         NSDictionary* settings = self.commandDelegate.settings;
-        NSString* rewardvideoId = settings[@"REWARDVIDEO_ID"];
+        NSString* bannerId = settings[@"BANNER_ID"];
+        NSString* interstitialId = settings[@"INTERSTITIAL_ID"];
+        NSString* rewardedId = settings[@"REWARDED_ID"];
         NSLog(@"Vungle mediation plugin init");
-        NSLog(@"rewardvideoId");
 
         GADRequest *request = [GADRequest request];
         VungleAdNetworkExtras *extras = [[VungleAdNetworkExtras alloc] init];
 
-        NSMutableArray *placements = [[NSMutableArray alloc]initWithObjects:rewardvideoId, nil];
+        NSMutableArray *placements = [[NSMutableArray alloc]initWithObjects:bannerId, interstitialId, rewardedId, nil];
         extras.allPlacements = placements;
         [request registerAdNetworkExtras:extras];
+        [_interstitial loadRequest:request];
 
         [GADRewardedAd
-            loadWithAdUnitID:rewardvideoId
+            loadWithAdUnitID:rewardedId
             request:request
             completionHandler:^(GADRewardedAd *ad, NSError *error) {
                 NSLog(@"load handler");
