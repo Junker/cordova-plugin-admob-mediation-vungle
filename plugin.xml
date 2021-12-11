@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cordova-plugin-admob-vungle" version="1.0.0"
+<plugin id="cordova-plugin-admob-mediation-vungle" version="1.0.0"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <name>cordova-plugin-admob-vungle</name>
+    <name>cordova-plugin-admob-mediation-vungle</name>
     <description>Cordova AdMob Mediation Plugin for Vungle</description>
 
     <engines>
