@@ -7,8 +7,12 @@
     <description>Cordova AdMob Mediation Plugin for Vungle</description>
 
     <engines>
-        <engine name="cordova" version=">=3" />
+        <engine name="cordova" version=">=8" />
     </engines>
+
+    <preference name="BANNER_ID"/>
+    <preference name="INTERSTITIAL_ID"/>
+    <preference name="REWARDED_ID"/>
 
     <platform name="android">
         <framework src="com.google.ads.mediation:vungle:6.8.1.0" />
@@ -28,9 +32,4 @@
         <source-file src="src/ios/Vungle.m" />
     </platform>
 
-	<config-file parent="/*" target="config.xml">
-		<preference name="BANNER_ID" value="$BANNER_ID"/>
-		<preference name="INTERSTITIAL_ID" value="$INTERSTITIAL_ID"/>
-		<preference name="REWARDED_ID" value="$REWARDED_ID"/>
-	</config-file>
 </plugin>
