@@ -15,7 +15,7 @@
     <preference name="REWARDED_ID"/>
 
     <platform name="android">
-        <framework src="com.google.ads.mediation:vungle:6.8.1.0" />
+        <framework src="com.google.ads.mediation:vungle:6.10.+" />
     </platform>
 
     <platform name="ios">
