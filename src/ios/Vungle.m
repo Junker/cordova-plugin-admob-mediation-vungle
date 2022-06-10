@@ -24,8 +24,8 @@
 
         NSMutableArray *placements = [[NSMutableArray alloc]initWithObjects:bannerId, interstitialId, rewardedId, nil];
         extras.allPlacements = placements;
+
         [request registerAdNetworkExtras:extras];
-        [_interstitial loadRequest:request];
 
         [GADRewardedAd
             loadWithAdUnitID:rewardedId
@@ -34,5 +34,14 @@
                 NSLog(@"load handler");
             }
         ];
+
+        [GADInterstitialAd
+            loadWithAdUnitID:interstitialId
+            request:request
+            completionHandler:^(GADInterstitialAd *ad, NSError *error) {
+                NSLog(@"load handler");
+            }
+        ];
+
     }
 } @end
