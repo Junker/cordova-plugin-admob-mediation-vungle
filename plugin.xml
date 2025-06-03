@@ -15,7 +15,7 @@
     <preference name="REWARDED_ID"/>
 
     <platform name="android">
-        <framework src="com.google.ads.mediation:vungle:6.12.0.0" />
+        <framework src="com.google.ads.mediation:vungle:7.3.+" />
     </platform>
 
     <platform name="ios">
@@ -24,7 +24,7 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="GoogleMobileAdsMediationVungle" spec="6.9.2.0"/>
+                <pod name="GoogleMobileAdsMediationVungle" spec="~> 7.3"/>
             </pods>
         </podspec>
 
